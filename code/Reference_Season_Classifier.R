@@ -20,6 +20,7 @@ names(ndvi_RS) <- months
 samples_RS <- st_read("C:/GIS Files/Data_GEE/Research/ground_truth/Crop_Labels.gpkg")
 # head(samples_RS)
 # Option 1 Extract training samples using spatial points
+# Extract training samples
 training_samples <- raster::extract(ndvi_RS,samples_RS, df=TRUE)
 head(training_samples)
 training_samples$class <- samples_RS$Crop_22
@@ -135,6 +136,7 @@ test$class <- as.factor(test$class)
 
 
 # train classifiers- Ether using train or train_set (whichever your choice to use points or polygons)
+# train classifiers
 # Start with Random forest classifier
 set.seed(123)
 RF_RS <- randomForest(
