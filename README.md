@@ -23,7 +23,7 @@ WORKFLOW OVERVIEW
 
 ------------------------------------------------------------
 
-CLIMATE VARIABLES USED
+CLIMATE VARIABLES Evaluated
 
 pdsi  - Palmer Drought Severity Index
 tmmx  - Maximum temperature
